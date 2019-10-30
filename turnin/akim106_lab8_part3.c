@@ -35,12 +35,13 @@ int main(void) {
 
     while (1) {
       input = ADC;
-      if (ADC >= max_light) {
+      if (input >= max_light) {
         PORTB = bottom_8;
         PORTD = top_2;   
       } else {
         PORTB = 0x00;
         PORTD = 0x00;
+      }
     }
     return 1;
 }
